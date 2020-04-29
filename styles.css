@@ -1,0 +1,25 @@
+.signage {
+    padding: 10px;
+    margin-right: 20px;
+    margin-top: 10px;
+    text-shadow: red 2px 2px;
+    color: yellow;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    letter-spacing: 3px;
+    text-decoration: underline;
+    font-style: oblique;
+    font-size: 36px;
+}
+body {
+    background-image: radial-gradient(yellow, green);
+    height: auto;
+    width: auto;
+    background-image: url(https://images.unsplash.com/photo-1587453711536-04fa854f970c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60);
+    
+}
+.search-bar {
+    width: 300px;
+    box-shadow: 1px 2px 1px 2px;
+    height: 5px;
+    padding: 10px;
+}
