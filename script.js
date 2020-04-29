@@ -1,12 +1,14 @@
-//var APIKey = "2ca050defd3bdf6d2275987436e01257";
-//var queryURL = "https://api.openweathermap.org/data/2.5/onecall?lat={lat}&lon={lon}&appid=2ca050defd3bdf6d2275987436e01257";
+// var APIKey = "2ca050defd3bdf6d2275987436e01257";
+// var queryURL = "api.openweathermap.org/data/2.5/weather?q={city name}&appid="; + APIKey
 
 var resultsDiv = $("<div>");
 var fiveDayDiv = $("<div>");
 var cityh1El = $("<h1>");
-
+var prevEntryDiv = $("<aside>")
 $("#search").on("click", function (event) {
-    alert("clicked")
+    if (response === previous) {
+        prevEntryDiv.append.text(response.name)
+    }
 })
 
 $.ajax({
