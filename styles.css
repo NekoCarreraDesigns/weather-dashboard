@@ -11,10 +11,11 @@
     font-size: 36px;
 }
 body {
-    background-image: radial-gradient(yellow, green);
-    height: auto;
-    width: auto;
+    
+    height: 100%;
+    width: 100%;
     background-image: url(https://images.unsplash.com/photo-1587453711536-04fa854f970c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60);
+    
     
 }
 .search-bar {
@@ -29,5 +30,35 @@ body {
     box-shadow: red 1px 1px 1px 1px;
     width: 55px;
     height: 30px;
+    
+}
+.resultsDiv {
+    text-align: center;
+    font-size: 32px;
+    color: yellow;
+    padding: 20px;
+    
+}
+.cityh1El {
+   text-align: center;
+   color: red;
+
+}
+.windDiv {
+    text-align: center;
+    color: yellow;
+    font-size: 32px;
+    padding: 20px;
+}
+.humidityDiv {
+    text-align: center;
+    color: yellow;
+    font-size: 32px;
+    padding: 20px;
+}
+.fiveDayDiv {
+    position: relative;
+    float: right;
+    color: yellow;
     
 }
