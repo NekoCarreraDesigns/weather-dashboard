@@ -1,4 +1,4 @@
-
+var daily
 var cityName
 var resultsDiv = $("<div>");
 var humidityDiv = $("<div>");
@@ -25,7 +25,6 @@ function search(cityName) {
         $(".windDiv").html("Wind:" + response.wind.speed + "mph");
         $("<h1>").append(cityh1El);
         $("<div>").append(resultsDiv);
-        $("<div>").append(fiveDayDiv);
         $("<div>").append(windDiv);
         $("<div>").append(humidityDiv)
 
@@ -38,29 +37,47 @@ function search(cityName) {
             console.log(queryURL)
             console.log(response)
 
-            $(".fiveDayDiv").html(response.main.empty())
-            console.log(fiveDayDiv)
-            $("<div>").append(fiveDayDiv)
-
-
         })
-
-
 
     });
 
 }
-
 $("#search").on("click", function (event) {
     console.log($(".search-bar").val())
     var searchBar = $(".search-bar").val()
     search(searchBar)
+    $(".prevEntryDiv").html(cityName)
 })
-var previousInput = [""];
+
+function fiveDay(cityName) {
+
+    daily = response.daily;
+    forecastH1.text("Here's the 5- day forecast for" + cityName + ":");
+    fiveDaily = moment.clone()
+    for (var i = 0; i < 5; i++) {
+        fiveDaily = fiveDaily.add(1, "d");
+        resultsDiv = daily[i].temp.day;
+        humidityDiv = parseInt(daily[i].humidity);
+        windDiv = parseInt(daily[i].wind.speed)
+        contentDiv = $("<div>")
+        $(".fiveDayDiv").html(response.list.temp[i])
+        console.log(fiveDayDiv)
+        $("<div>").append(fiveDayDiv)
+        fiveDayDiv.addClass("card");
+        contentDiv.addClass("card-body");
+        contentDiv.append(resultsDiv, humidityDiv, windDiv)
+    }
+
+}
+
+
+
+var oldInput = prevEntryDiv.searchBar;
+var previousInput = [];
 for (var i = 0; i < previousInput.length; i++) {
     var oldInput = cityName + previousInput[i]
-    if (previousInput.length === oldInput) {
-        (".prevEntryDiv").html(previousInput[i])
+    if (previousInput === oldInput) {
+        (".prevEntryDiv").html(JSON.stringify(previousInput[i]))
         $("<aside>").append(prevEntryDiv)
         prevEntryDiv.localStorage.setItem(cityName, previousInput)
     }
