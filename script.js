@@ -37,6 +37,7 @@ function search(cityName) {
             console.log(queryURL)
             console.log(response)
 
+
         })
 
     });
@@ -52,7 +53,7 @@ $("#search").on("click", function (event) {
 function fiveDay(cityName) {
 
     daily = response.daily;
-    forecastH1.text("Here's the 5- day forecast for" + cityName + ":");
+    forecastH1.text("Here's the 5-day forecast for" + cityName + ":");
     fiveDaily = moment.clone()
     for (var i = 0; i < 5; i++) {
         fiveDaily = fiveDaily.add(1, "d");
