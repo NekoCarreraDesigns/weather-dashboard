@@ -18,20 +18,7 @@ body {
     
     
 }
-.search-bar {
-    width: 300px;
-    box-shadow: 1px 2px 1px 2px;
-    height: 5px;
-    padding: 10px;
-}
-#search {
-    border-radius: 3px;
-    padding-left: 5px;
-    box-shadow: red 1px 1px 1px 1px;
-    width: 55px;
-    height: 30px;
-    
-}
+
 h3.date {
     font-size: 1em;
     text-align: center;

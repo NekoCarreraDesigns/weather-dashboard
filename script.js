@@ -1,14 +1,14 @@
 $(document).ready(function () {
-    var APIKey = "a8873d0d448c9dc93f60cba6ef75cb3e"
+    let APIKey = "a8873d0d448c9dc93f60cba6ef75cb3e"
 
-    var userCity;
-    var cityName;
-    var date;
-    var weather;
-    var weatherIcon;
-    var imgURL;
-    var allCities;
-    var cityBtn;
+    let userCity;
+    let cityName;
+    let date;
+    let weather;
+    let weatherIcon;
+    let imgURL;
+    let allCities;
+    let cityBtn;
 
     if ($(window).width() < 600) {
         $("aside").removeClass("col-3 d-block sidebar sidebar-sticky");
@@ -38,8 +38,8 @@ $(document).ready(function () {
         $("#search").val("");
 
         // display current date next to city
-        var currentDate = moment().format("LL");
-        var currentDateEl = $('.date[data-day="0"]');
+        let currentDate = moment().format("LL");
+        let currentDateEl = $('.date[data-day="0"]');
         currentDateEl.text(currentDate);
 
         // show the weather info container
@@ -50,7 +50,7 @@ $(document).ready(function () {
     }
 
     function getCurrentWeather() {
-        var queryURL =
+        let queryURL =
             "https://api.openweathermap.org/data/2.5/weather?q=" +
             userCity +
             "&appid=" +

@@ -2,22 +2,114 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Weather Dashboard</title>
-    <link rel="stylesheet" href="styles.css">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+        integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous" />
+
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@600&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
 </head>
 
 <body>
-    <h1 class="signage">Search your city here</h1>
-    <input class="search-bar"> <button id="search">Search</button>
-    <div class="fiveDayDiv"></div>
-    <aside class="prevEntryDiv">previous-results</aside>
+    <nav class="navbar navbar-dark justify-content-center">
+        <span class="navbar-brand mb-0 h1">Weather Dashboard <i class="fas fa-cloud-sun"></i>
+        </span>
+    </nav>
+    <div class="container-fluid">
+        <div class="row">
+            <aside class="col-3 d-block sidebar sidebar-sticky bg-light p-3 justify-content-center">
+                <h3 id="search-text">Search your city:&nbsp;</h3>
+                <form class="form-inline">
+                    <input class="form-control mb-3 mr-2" type="search" placeholder="Search" aria-label="Search"
+                        id="search" style="display: inline-block !important;" />
+                    <button class="btn btn-primary mb-3" type="submit" id="search-button"
+                        style="display: inline-block !important;">
+                        <i class="fas fa-search"></i>
+                    </button>
+                </form>
+                <div class="list-group cities"></div>
+                <div class="row justify-content-center">
+                    <button type="button" class="btn btn-danger btn-lg" id="clear-button">
+                        Clear All
+                    </button>
+                </div>
+            </aside>
 
-    <h1 class="cityh1El"></h1>
-    <div class="resultsDiv"></div>
-    <div class="windDiv"></div>
-    <div class="humidityDiv"></div>
+            <section class="col-9 my-auto text-center" id="welcome">
+                <p>Select a city</p>
+            </section>
+
+            <main class="col-9 d-none" id="weather-info">
+                <div class="m-3 p-3" id="current-weather">
+                    <div class="row col heading">
+                        <h1 id="city-name"></h1>
+                        <span id="weather-icon"></span>
+                    </div>
+                    <div class="row col">
+                        <h2 class="date" data-day="0"></h2>
+                    </div>
+
+                    <div class="row col">
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item" id="current-temp"></li>
+                            <li class="list-group-item" id="current-humidity"></li>
+                            <li class="list-group-item" id="current-wind"></li>
+                            <li class="list-group-item" id="current-uv"></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="row ml-3 p-2">
+                    <h2 id="forecast">5-Day Forecast</h2>
+                </div>
+
+                <div class="row">
+                    <div class="col col-md-2 mx-3 card card-body forecast-card" data-day="1">
+                        <div class="justify-content-center">
+                            <h3 class="card-title date"></h3>
+                            <span class="weather-icon"></span>
+                        </div>
+                        <p class="card-text temp"></p>
+                        <p class="card-text humidity"></p>
+                    </div>
+
+                    <div class="col col-md-2 mx-3 card card-body forecast-card" data-day="2">
+                        <h3 class="card-title date"></h3>
+                        <span class="weather-icon"></span>
+                        <p class="card-text temp"></p>
+                        <p class="card-text humidity"></p>
+                    </div>
+
+                    <div class="col col-md-2 mx-3 card card-body forecast-card" data-day="3">
+                        <h3 class="card-title date"></h3>
+                        <span class="weather-icon"></span>
+                        <p class="card-text temp"></p>
+                        <p class="card-text humidity"></p>
+                    </div>
+
+                    <div class="col col-md-2 mx-3 card card-body forecast-card" data-day="4">
+                        <h3 class="card-title date"></h3>
+                        <span class="weather-icon"></span>
+                        <p class="card-text temp"></p>
+                        <p class="card-text humidity"></p>
+                    </div>
+
+                    <div class="col col-md-2 mx-3 card card-body forecast-card" data-day="5">
+                        <h3 class="card-title date"></h3>
+                        <span class="weather-icon"></span>
+                        <p class="card-text temp"></p>
+                        <p class="card-text humidity"></p>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
 
 
 
