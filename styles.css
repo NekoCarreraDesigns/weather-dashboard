@@ -32,33 +32,81 @@ body {
     height: 30px;
     
 }
-.resultsDiv {
+h3.date {
+    font-size: 1em;
     text-align: center;
-    font-size: 32px;
-    color: yellow;
-    padding: 20px;
-    
-}
-.cityh1El {
-   text-align: center;
-   color: red;
-
-}
-.windDiv {
-    text-align: center;
-    color: yellow;
-    font-size: 32px;
-    padding: 20px;
-}
-.humidityDiv {
-    text-align: center;
-    color: yellow;
-    font-size: 32px;
-    padding: 20px;
-}
-.fiveDayDiv {
+  }
+  
+  .heading {
+    height: 60px !important;
+  }
+  
+  .navbar-brand {
+    font-size: 2.5em;
+  }
+  
+  .navbar {
+    background: rgb(2, 0, 36);
+    background: linear-gradient(
+      90deg,
+      rgba(2, 0, 36, 1) 0%,
+      rgba(9, 9, 121, 1) 35%,
+      rgba(0, 212, 255, 1) 100%
+    );
+  }
+  
+  .sidebar {
+    min-height: calc(100vh - 90px);
+  }
+  
+  .card {
+    width: 110%;
+  }
+  
+  .btn:hover {
+    color: white;
+    text-decoration: none;
+  }
+  
+  .low {
+    background-color: green;
+    color: white;
+  }
+  
+  .moderate {
+    background-color: yellow;
+    color: grey;
+  }
+  
+  .high {
+    background-color: orange;
+    color: white;
+  }
+  
+  .extreme {
+    background-color: red;
+    color: white;
+  }
+  
+  #current-weather {
+    border: 1px solid;
+    border-color: lightgray;
+  }
+  
+  #weather-icon {
     position: relative;
-    float: right;
-    color: yellow;
-    
-}
+    top: -25px;
+  }
+  
+  #clear-button {
+    position: absolute;
+    bottom: 50px;
+  }
+  
+  .full-width {
+    width: 100%;
+  }
+  
+  .mobile-text {
+    font-size: 1.3rem;
+  }
