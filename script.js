@@ -76,18 +76,18 @@ $(document).ready(function () {
             $("#weather-icon").append(weatherIcon);
 
             // display temperature
-            var tempK = response.main.temp;
-            var tempF = (tempK - 273.15) * 1.8 + 32;
+            let tempK = response.main.temp;
+            let tempF = (tempK - 273.15) * 1.8 + 32;
             $("#current-temp").html(
                 "Temperature: " + tempF.toFixed(1) + " &deg;" + "F"
             );
 
             // display humidity
-            var humidity = response.main.humidity;
+            let humidity = response.main.humidity;
             $("#current-humidity").html("Humidity: " + humidity + "%");
 
             // display wind speed
-            var wind = response.wind.speed;
+            let wind = response.wind.speed;
             $("#current-wind").html("Wind Speed: " + wind + " MPH");
 
             // display UV index
@@ -96,7 +96,7 @@ $(document).ready(function () {
     }
 
     function getForecast() {
-        var queryURL =
+        let queryURL =
             "https://api.openweathermap.org/data/2.5/forecast?q=" +
             userCity +
             "&appid=" +
@@ -106,11 +106,11 @@ $(document).ready(function () {
             url: queryURL,
             method: "GET",
         }).then(function (response) {
-            var results = response.list;
+            let results = response.list;
 
             // display 5 day forecast
-            var forecastCards = $(".forecast-card");
-            var j = 0;
+            let forecastCards = $(".forecast-card");
+            let j = 0;
 
             // display date for the next 5 days
             for (i = 0; i < forecastCards.length; i++) {
@@ -125,8 +125,8 @@ $(document).ready(function () {
             j = 0;
             // display temp for 5 days
             for (i = 0; i < forecastCards.length; i++) {
-                var tempK = results[j].main.temp;
-                var tempF = (tempK - 273.15) * 1.8 + 32;
+                let tempK = results[j].main.temp;
+                let tempF = (tempK - 273.15) * 1.8 + 32;
                 forecastCards[i].querySelector(".temp").innerHTML =
                     "Temp: " + tempF.toFixed(1) + " &deg;" + "F";
 
@@ -137,7 +137,7 @@ $(document).ready(function () {
 
             // display humidity for 5 days
             for (i = 0; i < forecastCards.length; i++) {
-                var humidity = results[j].main.humidity;
+                let humidity = results[j].main.humidity;
 
                 forecastCards[i].querySelector(".humidity").textContent =
                     "Humidity: " + humidity + "%";
@@ -164,14 +164,14 @@ $(document).ready(function () {
     }
 
     function formatDate() {
-        var year = date.slice(0, 4);
-        var month = date.slice(5, 7);
-        var day = date.slice(8, 10);
+        let year = date.slice(0, 4);
+        let month = date.slice(5, 7);
+        let day = date.slice(8, 10);
         date = month + "/" + day + "/" + year;
     }
 
     function displayUVI(lat, lon) {
-        var queryURL =
+        let queryURL =
             "https://api.openweathermap.org/data/2.5/uvi?appid=" +
             APIKey +
             "&lat=" +
@@ -183,7 +183,7 @@ $(document).ready(function () {
             url: queryURL,
             method: "GET",
         }).then(function (response) {
-            var uvEl = $("<button>");
+            let uvEl = $("<button>");
             renderUVColor(response.value, uvEl);
             uvEl.text(response.value);
             uvEl.attr("disabled", "disabled");
@@ -208,13 +208,13 @@ $(document).ready(function () {
     }
 
     function renderIcons() {
-        var stormIcon = "11d";
-        var drizzleIcon = "09d";
-        var rainIcon = "10d";
-        var snowIcon = "13d";
-        var atmosphereIcon = "50d";
-        var clearIcon = "01d";
-        var cloudIcon = "02d";
+        let stormIcon = "11d";
+        let drizzleIcon = "09d";
+        let rainIcon = "10d";
+        let snowIcon = "13d";
+        let atmosphereIcon = "50d";
+        let clearIcon = "01d";
+        let cloudIcon = "02d";
 
         if (weather === "Thunderstorm") {
             icon = stormIcon;
