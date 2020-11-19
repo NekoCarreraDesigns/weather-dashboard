@@ -1,55 +1,55 @@
+# Title: Weather Dashboard
 
-  # Title: Weather Dashboard
+![last commit](https://img.shields.io/github/last-commit/NekoCarreraDesigns/weather-dashboard?style=flat-square)![license badge](https://img.shields.io/github/license/NekoCarreraDesigns/weather-dashboard?style=flat-square)
 
-  ![last commit](https://img.shields.io/github/last-commit/NekoCarreraDesigns/weather-dashboard?style=flat-square)![license badge](https://img.shields.io/github/license/NekoCarreraDesigns/weather-dashboard?style=flat-square)
+### URL: https://nekocarreradesigns.github.io/weather-dashboard/
 
-  ### URL: https://nekocarreradesigns.github.io/weather-dashboard/
+![weather-dashboard](assets/WeatherDashboard.gif)
 
-  ## Description 
-  
-  App that uses a third party API, to look up weather data.
+## Description
 
-  ## Table of Contents 
-   
-  * [Installation](#installation)
-  * [Usage](#usage)
-  * [Future Developments](#futureDevelopments)
-  * [Credits](#credits)
-  * [Questions](#questions)
-  
-  ## Installation 
-  ``  clone repo, run in local browser
-  ``  
-  ## Usage 
-  
-  look up cities in the search bar, saves last city searched, clears all cities when full
+App that uses a third party API, to look up weather data.
 
-  ## Future Developments
+## Table of Contents
 
-  undefined
+- [Installation](#installation)
+- [Usage](#usage)
+- [Future Developments](#futureDevelopments)
+- [Credits](#credits)
+- [Questions](#questions)
 
-  ## Credits
+## Installation
 
-  * [Bootstrap](https://getbootstrap.com/)
+` clone repo, run in local browser `
 
-* jquery
+## Usage
 
-* open weather api
+look up cities in the search bar, saves last city searched, clears all cities when full
 
-  ## Contributors: 
-  
+## Future Developments
+
+undefined
+
+## Credits
+
+- [Bootstrap](https://getbootstrap.com/)
+
+- jquery
+
+- open weather api
+
+  ## Contributors:
+
   Nicholas C. Maas
 
   ## Questions?
 
-  Contact me at  [denvernick@hotmail.com]
-  
+  Contact me at [denvernick@hotmail.com]
+
   or[![Follow on Github] (https://img.shields.io/github/followers/NekoCarreraDesigns?label=Follow&style=social)](http://www.github.com/NekoCarreraDesigns)
 
   Copyright © 2020 Nichols C. Maas (http://www.github.com/NekoCarreraDesigns)
 
-  ---
+  ***
 
-  ##### _Created with [NekoCarreraDesigns readme generator] (https://github.com/NekoCarreraDesigns/readme-generator)
-
-  
+  ##### \_Created with [NekoCarreraDesigns readme generator] (https://github.com/NekoCarreraDesigns/readme-generator)
